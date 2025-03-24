@@ -43,6 +43,7 @@ phantom-hardwood-floors/
 
 - Node.js (version 18+)
 - npm or yarn package manager
+- vite
 
 ### Installation
 
@@ -56,6 +57,7 @@ phantom-hardwood-floors/
 2. Install dependencies:
 
    ```
+   npm i vite
    npm install
    ```
 
