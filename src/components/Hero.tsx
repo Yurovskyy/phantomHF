@@ -1,17 +1,34 @@
+import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 
+const backgroundImages = [
+  './images/bg/1.png',
+  './images/bg/2.png',
+  './images/bg/3.png',
+];
+
 const Hero = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length);
+    }, 5000); // troca a cada 5 segundos
+
+    return () => clearInterval(interval); // limpa intervalo ao desmontar
+  }, []);
+
   return (
     <section
       id="home"
       className="hero position-relative d-flex align-items-center text-light"
       style={{
         minHeight: "100vh",
-        backgroundImage:
-          'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7)), url("./images/hero-bg.jpg")',
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7)), url(${backgroundImages[currentImageIndex]})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
+        transition: "background-image 1s ease-in-out", // animação suave
       }}
     >
       <Container>
