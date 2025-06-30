@@ -8,7 +8,7 @@ const Hero = () => {
       style={{
         minHeight: "100vh",
         backgroundImage:
-          'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7)), url("/images/hero-bg.jpg")',
+          'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7)), url("./images/hero-bg.jpg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -31,7 +31,7 @@ const Hero = () => {
             </p>
             <div className="d-flex justify-content-center gap-3 fade-in">
               <Button variant="primary" size="lg" href="#quote">
-                Get a Free Quote
+                Free Estimate
               </Button>
               <Button variant="outline-light" size="lg" href="#services">
                 Explore Our Services
@@ -45,17 +45,11 @@ const Hero = () => {
                   </h3>
                   <p className="mb-0">More Durable</p>
                 </div>
-                <div className="mx-3 border-start border-end px-4 border-light">
+                <div className="mx-3 border-start px-4 border-light">
                   <h3 className="text-accent mb-0">
-                    <span className="counter">500</span>+
+                    <span className="counter">50</span>+
                   </h3>
                   <p className="mb-0">Projects Completed</p>
-                </div>
-                <div className="mx-3">
-                  <h3 className="text-accent mb-0">
-                    Only <span className="counter">3</span>
-                  </h3>
-                  <p className="mb-0">Spots Available</p>
                 </div>
               </div>
             </div>

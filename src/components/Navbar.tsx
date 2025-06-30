@@ -29,9 +29,8 @@ const Navbar = () => {
     <BootstrapNavbar
       expand="lg"
       fixed="top"
-      className={`py-3 transition-all ${
-        scrolled ? "bg-dark shadow-sm" : "bg-transparent"
-      }`}
+      className={`py-3 transition-all ${scrolled ? "bg-dark shadow-sm" : "bg-transparent"
+        }`}
       variant={scrolled ? "dark" : "light"}
     >
       <Container>
@@ -40,7 +39,7 @@ const Navbar = () => {
           className="d-flex align-items-center"
         >
           <img
-            src="/logo.svg"
+            src="./logo.png"
             width="40"
             height="40"
             className="d-inline-block align-top me-2"

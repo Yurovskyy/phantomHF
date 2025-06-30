@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card, Button, Accordion } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 const Services = () => {
   const services = [
@@ -8,7 +8,7 @@ const Services = () => {
       description:
         "Professional installation of new hardwood flooring with a variety of wood types and styles available.",
       icon: "bi-tools",
-      image: "/images/services/installation.jpg",
+      image: "./images/services/installation.jpg",
       benefits: [
         "Expert precision installation",
         "Variety of wood species available",
@@ -22,7 +22,7 @@ const Services = () => {
       description:
         "Bring your old, worn out hardwood floors back to life with our professional restoration services.",
       icon: "bi-arrow-repeat",
-      image: "/images/services/restoration.jpg",
+      image: "./images/services/restoration.jpg",
       benefits: [
         "Complete sanding and refinishing",
         "Repair of damaged sections",
@@ -36,7 +36,7 @@ const Services = () => {
       description:
         "Regular maintenance and repair services to keep your hardwood floors looking beautiful for years.",
       icon: "bi-wrench-adjustable",
-      image: "/images/services/maintenance.jpg",
+      image: "./images/services/maintenance.jpg",
       benefits: [
         "Spot repairs for damaged areas",
         "Deep cleaning treatments",
@@ -50,41 +50,13 @@ const Services = () => {
       description:
         "Create a unique floor design with custom inlays, borders, and patterns to match your style.",
       icon: "bi-palette",
-      image: "/images/services/custom-design.jpg",
+      image: "./images/services/custom-design.jpg",
       benefits: [
         "Custom inlays and borders",
         "Mixed wood species designs",
         "Personalized patterns",
         "Artistic floor features",
       ],
-    },
-  ];
-
-  const faqItems = [
-    {
-      question: "How long does hardwood floor installation take?",
-      answer:
-        "The timeframe varies depending on the size of the project, but typically a standard installation takes 3-5 days including acclimation, installation, finishing, and curing time.",
-    },
-    {
-      question: "What types of wood do you offer?",
-      answer:
-        "We offer a wide range of domestic and exotic hardwoods including oak, maple, walnut, cherry, hickory, ash, mahogany, and more. Each has unique characteristics in terms of hardness, grain pattern, and color.",
-    },
-    {
-      question: "How often should hardwood floors be refinished?",
-      answer:
-        "This depends on use and wear, but generally, hardwood floors should be refinished every 7-10 years. High-traffic areas may need attention sooner, while low-traffic areas can last longer.",
-    },
-    {
-      question: "What makes your eco-friendly finishes different?",
-      answer:
-        "Our eco-friendly finishes are low-VOC or zero-VOC, meaning they emit fewer harmful chemicals. They're also 40% more durable than conventional finishes, providing better protection while being safer for your family and the environment.",
-    },
-    {
-      question: "Do you offer warranties on your work?",
-      answer:
-        "Yes, we offer a comprehensive triple guarantee that covers materials, craftsmanship, and customer satisfaction. Our installation work is warranted for 5 years, and we include a free 6-month checkup with every project.",
     },
   ];
 
@@ -150,25 +122,6 @@ const Services = () => {
           ))}
         </Row>
 
-        <Row className="mt-5 pt-4">
-          <Col lg={10} className="mx-auto">
-            <h3 className="mb-4 text-center">Frequently Asked Questions</h3>
-            <Accordion>
-              {faqItems.map((faq, index) => (
-                <Accordion.Item
-                  eventKey={index.toString()}
-                  key={index}
-                  className="mb-3 border rounded shadow-sm"
-                >
-                  <Accordion.Header>
-                    <span className="fw-semibold">{faq.question}</span>
-                  </Accordion.Header>
-                  <Accordion.Body>{faq.answer}</Accordion.Body>
-                </Accordion.Item>
-              ))}
-            </Accordion>
-          </Col>
-        </Row>
       </Container>
     </section>
   );

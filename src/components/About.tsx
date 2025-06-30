@@ -28,39 +28,6 @@ const About = () => {
     },
   ];
 
-  const timelineSteps = [
-    {
-      id: 1,
-      title: "Consultation",
-      description: "We meet to discuss your vision, needs, and preferences.",
-    },
-    {
-      id: 2,
-      title: "Selection",
-      description: "Choose from our premium wood options and custom finishes.",
-    },
-    {
-      id: 3,
-      title: "Preparation",
-      description: "We prepare the space and acclimate the wood properly.",
-    },
-    {
-      id: 4,
-      title: "Installation",
-      description: "Expert installation with precision and care.",
-    },
-    {
-      id: 5,
-      title: "Finishing",
-      description: "Application of our eco-friendly, durable finishes.",
-    },
-    {
-      id: 6,
-      title: "Final Inspection",
-      description: "Thorough quality check and client walkthrough.",
-    },
-  ];
-
   return (
     <section id="about" className="section py-5 bg-light">
       <Container>
@@ -79,7 +46,7 @@ const About = () => {
           <Col lg={6} className="mb-4 mb-lg-0">
             <div className="position-relative">
               <img
-                src="/images/about/workshop.jpg"
+                src="./images/about/workshop.jpg"
                 alt="Craftsmen at work"
                 className="img-fluid rounded shadow-lg"
                 style={{ width: "100%", height: "auto", objectFit: "cover" }}
@@ -117,7 +84,7 @@ const About = () => {
             </p>
             <div className="d-flex align-items-center mt-4">
               <img
-                src="/images/about/founder.jpg"
+                src="./images/about/founder.jpg"
                 alt="Founder"
                 className="rounded-circle me-3"
                 style={{ width: "60px", height: "60px", objectFit: "cover" }}
@@ -126,63 +93,6 @@ const About = () => {
                 <p className="fw-bold mb-0">James Mitchell</p>
                 <p className="text-muted mb-0">Founder & Master Craftsman</p>
               </div>
-            </div>
-          </Col>
-        </Row>
-
-        <Row className="mt-5 pt-3">
-          <Col xs={12} className="mb-4 text-center">
-            <h3>Our Process Timeline</h3>
-            <p className="lead">How we transform your vision into reality</p>
-          </Col>
-          <Col xs={12}>
-            <div className="position-relative">
-              {/* Timeline Line */}
-              <div
-                className="position-absolute h-100"
-                style={{
-                  width: "4px",
-                  backgroundColor: "var(--color-primary)",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  top: 0,
-                  zIndex: 1,
-                }}
-              ></div>
-
-              {/* Timeline Items */}
-              {timelineSteps.map((step, index) => (
-                <Row
-                  className={`mb-5 align-items-center ${
-                    index % 2 === 0 ? "" : "flex-row-reverse"
-                  }`}
-                  key={step.id}
-                >
-                  <Col
-                    md={5}
-                    className={`text-${index % 2 === 0 ? "end" : "start"}`}
-                  >
-                    <div className="p-3">
-                      <h4>{step.title}</h4>
-                      <p className="mb-0">{step.description}</p>
-                    </div>
-                  </Col>
-                  <Col md={2} className="text-center">
-                    <div
-                      className="timeline-icon bg-primary text-light rounded-circle d-flex align-items-center justify-content-center mx-auto"
-                      style={{
-                        width: "70px",
-                        height: "70px",
-                        zIndex: 2,
-                        position: "relative",
-                      }}
-                    >
-                      <span className="fw-bold fs-4">{step.id}</span>
-                    </div>
-                  </Col>
-                  <Col md={5}></Col>
-                </Row>
-              ))}
             </div>
           </Col>
         </Row>
