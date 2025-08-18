@@ -55,7 +55,7 @@ const About = () => {
                 className="position-absolute bg-accent text-dark p-3 rounded shadow-lg"
                 style={{ bottom: "20px", right: "-20px", maxWidth: "200px" }}
               >
-                <p className="h4 mb-0">25+ Years</p>
+                <p className="h4 mb-0">10+ Years</p>
                 <p className="mb-0">of combined experience</p>
               </div>
             </div>
@@ -65,9 +65,9 @@ const About = () => {
             <p>
               Phantom Hardwood Floors was established with a clear vision: to
               transform ordinary spaces into extraordinary showcases through the
-              artistry of fine hardwood flooring. Our founder, with over 15
-              years of experience in traditional woodworking, assembled a team
-              of like-minded artisans who share his passion for craftsmanship.
+              artistry of fine hardwood flooring. Our founder, with over 5 years
+              of experience in traditional woodworking, assembled a team of
+              like-minded artisans who share his passion for craftsmanship.
             </p>
             <p>
               What sets us apart is our unique combination of time-honored
@@ -90,7 +90,7 @@ const About = () => {
                 style={{ width: "60px", height: "60px", objectFit: "cover" }}
               />
               <div>
-                <p className="fw-bold mb-0">James Mitchell</p>
+                <p className="fw-bold mb-0">Augusto Matias</p>
                 <p className="text-muted mb-0">Founder & Master Craftsman</p>
               </div>
             </div>
@@ -114,7 +114,7 @@ const About = () => {
           ))}
         </Row>
 
-        <Row className="mt-5 pt-3 bg-dark text-light p-4 rounded">
+        {/* <Row className="mt-5 pt-3 bg-dark text-light p-4 rounded">
           <Col lg={8} className="mx-auto text-center">
             <i className="bi bi-tree-fill text-accent fs-1 mb-3"></i>
             <h3 className="mb-3">Our Environmental Commitment</h3>
@@ -130,7 +130,7 @@ const About = () => {
               projects.
             </p>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </section>
   );

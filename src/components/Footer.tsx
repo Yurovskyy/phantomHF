@@ -53,7 +53,7 @@ const Footer = () => {
             </ul>
           </Col>
 
-          <Col lg={4} className="mb-4 mb-md-0">
+          {/* <Col lg={4} className="mb-4 mb-md-0">
             <h5 className="text-accent mb-3">Newsletter</h5>
             <p>
               Subscribe to receive updates, access to exclusive deals, and more.
@@ -70,7 +70,7 @@ const Footer = () => {
                 Subscribe
               </Button>
             </Form>
-          </Col>
+          </Col> */}
         </Row>
 
         <Row className="border-top border-secondary pt-4">

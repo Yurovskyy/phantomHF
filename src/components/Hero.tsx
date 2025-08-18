@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 
 const backgroundImages = [
-  './images/bg/1.png',
-  './images/bg/2.png',
-  './images/bg/3.png',
+  "./images/bg/1.jpg",
+  "./images/bg/2.jpg",
+  "./images/bg/3.jpg",
 ];
 
 const Hero = () => {
@@ -12,7 +12,9 @@ const Hero = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length);
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % backgroundImages.length
+      );
     }, 5000); // troca a cada 5 segundos
 
     return () => clearInterval(interval); // limpa intervalo ao desmontar
