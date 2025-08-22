@@ -42,8 +42,8 @@ const About = () => {
           </Col>
         </Row>
 
-        <Row className="align-items-center mb-5">
-          <Col lg={6} className="mb-4 mb-lg-0">
+        <Row className="text-center justify-content-center">
+          {/* <Col lg={6} className="mb-4 mb-lg-0">
             <div className="position-relative">
               <img
                 src="./images/about/workshop.jpg"
@@ -59,15 +59,15 @@ const About = () => {
                 <p className="mb-0">of combined experience</p>
               </div>
             </div>
-          </Col>
+          </Col> */}
           <Col lg={6}>
             <h3 className="mb-4">Our Commitment to Quality</h3>
             <p>
               Phantom Hardwood Floors was established with a clear vision: to
               transform ordinary spaces into extraordinary showcases through the
-              artistry of fine hardwood flooring. Our founder, with over 5 years
-              of experience in traditional woodworking, assembled a team of
-              like-minded artisans who share his passion for craftsmanship.
+              artistry of fine hardwood flooring. Our founder, with over 15
+              years of experience in traditional woodworking, assembled a team
+              of like-minded artisans who share his passion for craftsmanship.
             </p>
             <p>
               What sets us apart is our unique combination of time-honored
@@ -82,13 +82,7 @@ const About = () => {
               environmental footprint. This dedication to quality has earned us
               recognition and trust throughout the New York metro area.
             </p>
-            <div className="d-flex align-items-center mt-4">
-              <img
-                src="./images/about/founder.jpg"
-                alt="Founder"
-                className="rounded-circle me-3"
-                style={{ width: "60px", height: "60px", objectFit: "cover" }}
-              />
+            <div className="d-flex align-items-center mt-4 text-center justify-content-center ">
               <div>
                 <p className="fw-bold mb-0">Augusto Matias</p>
                 <p className="text-muted mb-0">Founder & Master Craftsman</p>

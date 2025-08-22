@@ -21,7 +21,7 @@ const Contact = () => {
               <Card.Body className="p-4 p-md-5">
                 <h3 className="mb-4">Contact Information</h3>
 
-                <div className="d-flex align-items-center mb-4">
+                {/* <div className="d-flex align-items-center mb-4">
                   <div
                     className="rounded-circle bg-primary d-flex align-items-center justify-content-center me-3"
                     style={{ width: "45px", height: "45px", minWidth: "45px" }}
@@ -34,7 +34,7 @@ const Contact = () => {
                       1234 Hardwood Ave, New York, NY 10001
                     </p>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="d-flex align-items-center mb-4">
                   <div
@@ -45,7 +45,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h5 className="mb-1">Phone</h5>
-                    <p className="mb-0">(555) 123-4567</p>
+                    <p className="mb-0">(732)900-6603</p>
                   </div>
                 </div>
 
@@ -58,7 +58,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h5 className="mb-1">Email</h5>
-                    <p className="mb-0">info@phantomhardwoodfloors.com</p>
+                    <p className="mb-0">phantomhardwoodfloors@gmail.com</p>
                   </div>
                 </div>
 
@@ -92,7 +92,8 @@ const Contact = () => {
                     </div>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/phantomhardwood/"
+                    target="_blank"
                     className="me-3 social-icon"
                     aria-label="Instagram"
                   >
@@ -103,7 +104,7 @@ const Contact = () => {
                       <i className="bi bi-instagram text-light"></i>
                     </div>
                   </a>
-                  <a
+                  {/* <a
                     href="#"
                     className="me-3 social-icon"
                     aria-label="Pinterest"
@@ -122,7 +123,7 @@ const Contact = () => {
                     >
                       <i className="bi bi-youtube text-light"></i>
                     </div>
-                  </a>
+                  </a> */}
                 </div>
               </Card.Body>
             </Card>

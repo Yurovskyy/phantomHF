@@ -15,19 +15,19 @@ const Gallery = () => {
   } | null>(null);
 
   const galleryItems = [
-    {
-      id: 1,
-      title: "Classic Oak Dining Room",
-      description: "Solid oak hardwood with satin finish",
-      image: "./images/gallery/dining-room.jpg",
-      category: "installation",
-      story:
-        "The Johnson family wanted to update their 1980s dining room with a timeless look. We installed solid oak hardwood with a warm honey stain and satin finish to complement their antique furniture.",
-    },
+    // {
+    //   id: 1,
+    //   title: "Classic Oak Dining Room",
+    //   description: "Solid oak hardwood with satin finish",
+    //   image: "./images/gallery/dining-room.jpg",
+    //   category: "installation",
+    //   story:
+    //     "The Johnson family wanted to update their 1980s dining room with a timeless look. We installed solid oak hardwood with a warm honey stain and satin finish to complement their antique furniture.",
+    // },
     {
       id: 2,
       title: "Modern Living Room Makeover",
-      description: "Natural walnut with matte finish",
+      description: "Natural walnut ",
       image: "./images/gallery/living-room.jpg",
       category: "installation",
       story:
@@ -35,96 +35,106 @@ const Gallery = () => {
     },
     {
       id: 3,
-      title: "Victorian Restoration",
-      description: "Original pine floors restored to their former glory",
-      image: "./images/gallery/victorian-after.jpg",
-      category: "restoration",
-      before: "./images/gallery/victorian-before.jpg",
-      story:
-        "This 1890s brownstone had original pine floors hidden under layers of carpet and linoleum. We carefully restored them to showcase the home's historic character.",
-    },
-    {
-      id: 4,
-      title: "Custom Parquet Design",
-      description: "Mixed woods in a bespoke herringbone pattern",
-      image: "./images/gallery/custom-design.jpg",
-      category: "design",
-      story:
-        "Our client wanted something truly unique for their foyer. We created this stunning herringbone pattern using three complementary wood species: oak, walnut, and maple.",
-    },
-    {
-      id: 5,
-      title: "Luxury Apartment Renovation",
-      description: "European white oak with custom finish",
-      image: "./images/gallery/apartment.jpg",
+      title: "Bedroom Restoration",
+      description: "Original white oak floors restored to their former glory",
+      image: "./images/gallery/bedroom.jpg",
       category: "installation",
+      // before: "./images/gallery/victorian-before.jpg",
       story:
-        "For this high-end apartment renovation, we imported European white oak and applied a custom finish to achieve the exact color the interior designer specified.",
+        "This 1890s brownstone had original white oak floors hidden under layers of carpet and linoleum. We carefully restored them to showcase the home's historic character.",
     },
-    {
-      id: 6,
-      title: "Weathered Floor Revival",
-      description: "Mahogany floors rescued from water damage",
-      image: "./images/gallery/mahogany-after.jpg",
-      category: "restoration",
-      before: "./images/gallery/mahogany-before.jpg",
-      story:
-        "After a plumbing leak, these beautiful mahogany floors seemed beyond repair. We successfully restored them, saving the homeowner thousands compared to replacement.",
-    },
+    // {
+    //   id: 4,
+    //   title: "Custom Parquet Design",
+    //   description: "Mixed woods in a bespoke herringbone pattern",
+    //   image: "./images/gallery/custom-design.jpg",
+    //   category: "design",
+    //   story:
+    //     "Our client wanted something truly unique for their foyer. We created this stunning herringbone pattern using three complementary wood species: oak, walnut, and maple.",
+    // },
+    // {
+    //   id: 5,
+    //   title: "Luxury Apartment Renovation",
+    //   description: "European white oak with custom finish",
+    //   image: "./images/gallery/apartment.jpg",
+    //   category: "installation",
+    //   story:
+    //     "For this high-end apartment renovation, we imported European white oak and applied a custom finish to achieve the exact color the interior designer specified.",
+    // },
+    // {
+    //   id: 6,
+    //   title: "Weathered Floor Revival",
+    //   description: "Mahogany floors rescued from water damage",
+    //   image: "./images/gallery/mahogany-after.jpg",
+    //   category: "restoration",
+    //   before: "./images/gallery/mahogany-before.jpg",
+    //   story:
+    //     "After a plumbing leak, these beautiful mahogany floors seemed beyond repair. We successfully restored them, saving the homeowner thousands compared to replacement.",
+    // },
     {
       id: 7,
-      title: "Cherry Kitchen Flooring",
-      description: "Rich cherry hardwood with semi-gloss finish",
+      title: "Kitchen Flooring",
+      description: "Rich hardwood with semi-gloss finish",
       image: "./images/gallery/kitchen.jpg",
       category: "installation",
       story:
-        "Cherry was the perfect choice for this kitchen renovation, adding warmth and complementing the natural stone countertops.",
+        "Dark wood was the perfect choice for this kitchen renovation, adding warmth and complementing the natural stone countertops.",
     },
+    // {
+    //   id: 8,
+    //   title: "Commercial Showroom Floor",
+    //   description: "Durable ash flooring for high-traffic retail space",
+    //   image: "./images/gallery/commercial.jpg",
+    //   category: "commercial",
+    //   story:
+    //     "This luxury retailer needed flooring that would stand up to heavy foot traffic while maintaining a high-end appearance. We selected ash with our toughest commercial-grade finish.",
+    // },
+    // {
+    //   id: 9,
+    //   title: "Designer Inlay Feature",
+    //   description: "Custom medallion inlay with multiple wood species",
+    //   image: "./images/gallery/medallion.jpg",
+    //   category: "design",
+    //   story:
+    //     "The centerpiece of this grand entrance hall is our custom designed medallion featuring six different woods and intricate laser-cut inlays.",
+    // },
+    // {
+    //   id: 10,
+    //   title: "Historic Home Transformation",
+    //   description: "Original maple floors brought back to life",
+    //   image: "./images/gallery/historic-after.jpg",
+    //   category: "restoration",
+    //   before: "./images/gallery/historic-before.jpg",
+    //   story:
+    //     "These 100-year-old maple floors were covered by carpet for decades. Our restoration process revealed their natural beauty while preserving their authentic character and patina.",
+    // },
+    // {
+    //   id: 11,
+    //   title: "Timelapse: Restaurant Installation",
+    //   description: "Watch our team install 2,500 sq ft in just 5 days",
+    //   image: "./images/gallery/timelapse.jpg",
+    //   category: "commercial",
+    //   story:
+    //     "We completed this restaurant installation on a tight timeline to minimize business disruption. The time-lapse video showcases our efficient process from subfloor prep to final finish.",
+    // },
+    // {
+    //   id: 12,
+    //   title: "Beach House Engineered Flooring",
+    //   description: "Engineered white oak for coastal conditions",
+    //   image: "./images/gallery/beach-house.jpg",
+    //   category: "installation",
+    //   story:
+    //     "For this oceanfront property, we selected engineered white oak with a specialized finish to withstand humidity fluctuations and salt air exposure.",
+    // },
     {
-      id: 8,
-      title: "Commercial Showroom Floor",
-      description: "Durable ash flooring for high-traffic retail space",
-      image: "./images/gallery/commercial.jpg",
-      category: "commercial",
-      story:
-        "This luxury retailer needed flooring that would stand up to heavy foot traffic while maintaining a high-end appearance. We selected ash with our toughest commercial-grade finish.",
-    },
-    {
-      id: 9,
-      title: "Designer Inlay Feature",
-      description: "Custom medallion inlay with multiple wood species",
-      image: "./images/gallery/medallion.jpg",
-      category: "design",
-      story:
-        "The centerpiece of this grand entrance hall is our custom designed medallion featuring six different woods and intricate laser-cut inlays.",
-    },
-    {
-      id: 10,
-      title: "Historic Home Transformation",
-      description: "Original maple floors brought back to life",
-      image: "./images/gallery/historic-after.jpg",
-      category: "restoration",
-      before: "./images/gallery/historic-before.jpg",
-      story:
-        "These 100-year-old maple floors were covered by carpet for decades. Our restoration process revealed their natural beauty while preserving their authentic character and patina.",
-    },
-    {
-      id: 11,
-      title: "Timelapse: Restaurant Installation",
-      description: "Watch our team install 2,500 sq ft in just 5 days",
-      image: "./images/gallery/timelapse.jpg",
-      category: "commercial",
-      story:
-        "We completed this restaurant installation on a tight timeline to minimize business disruption. The time-lapse video showcases our efficient process from subfloor prep to final finish.",
-    },
-    {
-      id: 12,
-      title: "Beach House Engineered Flooring",
-      description: "Engineered white oak for coastal conditions",
-      image: "./images/gallery/beach-house.jpg",
+      id: 13,
+      title: "Living Room",
+      description: "Natural walnut with matte finish",
+      image: "./images/gallery/living-room2.jpg",
+
       category: "installation",
       story:
-        "For this oceanfront property, we selected engineered white oak with a specialized finish to withstand humidity fluctuations and salt air exposure.",
+        "For this oceanfront property, we selected engineered pine wood with a specialized finish to withstand humidity fluctuations and salt air exposure.",
     },
   ];
 

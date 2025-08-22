@@ -113,7 +113,11 @@ const Services = () => {
                   </ul>
                 </Card.Body>
                 <Card.Footer className="bg-white border-0 p-4 pt-0">
-                  <Button variant="outline-primary" className="w-100">
+                  <Button
+                    variant="outline-primary"
+                    className="w-100"
+                    href="#contact"
+                  >
                     Learn More
                   </Button>
                 </Card.Footer>
@@ -121,7 +125,6 @@ const Services = () => {
             </Col>
           ))}
         </Row>
-
       </Container>
     </section>
   );

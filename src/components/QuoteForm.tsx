@@ -1,13 +1,5 @@
 import { useState, ChangeEvent } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Form,
-  Button,
-  Alert,
-  Card,
-} from "react-bootstrap";
+import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 
 interface FormData {
   firstName: string;
@@ -29,7 +21,7 @@ interface FormData {
 
 const QuoteForm = () => {
   const [step, setStep] = useState(1);
-  const [submitted, setSubmitted] = useState(false);
+  const [submitted] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -76,10 +68,46 @@ const QuoteForm = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // In a real app, you would send the data to a server here
-    console.log("Form data:", formData);
-    setSubmitted(true);
-    window.scrollTo(0, 0);
+
+    // Cria a string do corpo do e-mail com todas as informações do formulário
+    const emailBody = `
+      Quote Request Details:
+      
+      Personal Information:
+      - Name: ${formData.firstName} ${formData.lastName}
+      - Email: ${formData.email}
+      - Phone: ${formData.phone}
+      - Preferred Contact Method: ${formData.preferredContact}
+      
+      Address:
+      - Street: ${formData.address}
+      - City: ${formData.city}
+      - State: ${formData.state}
+      - Zip Code: ${formData.zipCode}
+      
+      Project Details:
+      - Project Type: ${formData.projectType}
+      - Approximate Square Footage: ${formData.squareFootage}
+      - Desired Timeframe: ${formData.timeframe || "Not specified"}
+      - Budget Range: ${formData.budget || "Not specified"}
+      
+      Additional Details:
+      - Message: ${formData.message || "No additional details."}
+      
+      How they heard about us:
+      - ${formData.howHeard || "Not specified."}
+    `;
+
+    // Codifica a URL para garantir que o texto do corpo do e-mail seja formatado corretamente
+    const subject = encodeURIComponent("New Quote Request from Website");
+    const body = encodeURIComponent(emailBody);
+
+    // Redireciona para o mensageiro de e-mail com os dados preenchidos
+    window.location.href = `mailto:phantomhardwoodfloors@gmail.com?subject=${subject}&body=${body}`;
+
+    // Não defina o estado 'submitted' aqui, pois o usuário sairá da página
+    // setSubmitted(true);
+    // window.scrollTo(0, 0);
   };
 
   const renderStepIndicator = () => {
@@ -126,24 +154,25 @@ const QuoteForm = () => {
   };
 
   const renderStepContent = () => {
-    if (submitted) {
-      return (
-        <Alert variant="success" className="text-center p-4">
-          <i className="bi bi-check-circle fs-1 text-success mb-3 d-block"></i>
-          <h4>Thank You!</h4>
-          <p>
-            Your quote request has been submitted successfully. One of our
-            representatives will contact you within 24 hours.
-          </p>
-          <Button
-            variant="primary"
-            onClick={() => (window.location.href = "#home")}
-          >
-            Return to Home
-          </Button>
-        </Alert>
-      );
-    }
+    // A tela de sucesso não será exibida mais, pois o usuário será redirecionado
+    // if (submitted) {
+    //   return (
+    //     <Alert variant="success" className="text-center p-4">
+    //       <i className="bi bi-check-circle fs-1 text-success mb-3 d-block"></i>
+    //       <h4>Thank You!</h4>
+    //       <p>
+    //         Your quote request has been submitted successfully. One of our
+    //         representatives will contact you within 24 hours.
+    //       </p>
+    //       <Button
+    //         variant="primary"
+    //         onClick={() => (window.location.href = "#home")}
+    //       >
+    //         Return to Home
+    //       </Button>
+    //     </Alert>
+    //   );
+    // }
 
     switch (step) {
       case 1:
