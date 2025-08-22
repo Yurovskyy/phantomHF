@@ -236,7 +236,7 @@ const Contact = () => {
               style={{ height: "400px", width: "100%", position: "relative" }}
             >
               <img
-                src="/images/map-ny.jpg"
+                src="./images/ny.jpg"
                 alt="Service area map - New York metro area"
                 className="img-fluid w-100 h-100 rounded shadow-sm"
                 style={{ objectFit: "cover" }}
