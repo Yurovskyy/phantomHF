@@ -1,6 +1,60 @@
+import { useState, ChangeEvent, FormEvent } from "react";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 
 const Contact = () => {
+  // Define o estado para armazenar os dados do formulário
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  // Função para atualizar o estado quando o usuário digita nos campos
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Função para lidar com o envio do formulário
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Cria o corpo do e-mail com os dados do formulário
+    const emailBody = `
+      Name: ${formData.name}
+      Email: ${formData.email}
+      Phone: ${formData.phone}
+      
+      Message:
+      ${formData.message}
+    `;
+
+    // Codifica os dados para a URL
+    const subject = encodeURIComponent(
+      formData.subject || "New Message from Website Contact Form"
+    );
+    const body = encodeURIComponent(emailBody);
+
+    // Redireciona o usuário para o cliente de e-mail com os campos preenchidos
+    window.location.href = `mailto:phantomhardwoodfloors@gmail.com?subject=${subject}&body=${body}`;
+
+    // Opcional: Limpar o formulário após o envio
+    // setFormData({
+    //   name: "",
+    //   email: "",
+    //   phone: "",
+    //   subject: "",
+    //   message: "",
+    // });
+  };
+
   return (
     <section id="contact" className="section py-5">
       <Container>
@@ -20,21 +74,6 @@ const Contact = () => {
             <Card className="border-0 shadow-sm h-100">
               <Card.Body className="p-4 p-md-5">
                 <h3 className="mb-4">Contact Information</h3>
-
-                {/* <div className="d-flex align-items-center mb-4">
-                  <div
-                    className="rounded-circle bg-primary d-flex align-items-center justify-content-center me-3"
-                    style={{ width: "45px", height: "45px", minWidth: "45px" }}
-                  >
-                    <i className="bi bi-geo-alt-fill text-light"></i>
-                  </div>
-                  <div>
-                    <h5 className="mb-1">Address</h5>
-                    <p className="mb-0">
-                      1234 Hardwood Ave, New York, NY 10001
-                    </p>
-                  </div>
-                </div> */}
 
                 <div className="d-flex align-items-center mb-4">
                   <div
@@ -104,26 +143,6 @@ const Contact = () => {
                       <i className="bi bi-instagram text-light"></i>
                     </div>
                   </a>
-                  {/* <a
-                    href="#"
-                    className="me-3 social-icon"
-                    aria-label="Pinterest"
-                  >
-                    <div
-                      className="rounded-circle bg-primary d-flex align-items-center justify-content-center"
-                      style={{ width: "40px", height: "40px" }}
-                    >
-                      <i className="bi bi-pinterest text-light"></i>
-                    </div>
-                  </a>
-                  <a href="#" className="social-icon" aria-label="YouTube">
-                    <div
-                      className="rounded-circle bg-primary d-flex align-items-center justify-content-center"
-                      style={{ width: "40px", height: "40px" }}
-                    >
-                      <i className="bi bi-youtube text-light"></i>
-                    </div>
-                  </a> */}
                 </div>
               </Card.Body>
             </Card>
@@ -133,14 +152,17 @@ const Contact = () => {
             <Card className="border-0 shadow-sm">
               <Card.Body className="p-4 p-md-5">
                 <h3 className="mb-4">Send us a Message</h3>
-                <Form>
+                <Form onSubmit={handleSubmit}>
                   <Row>
                     <Col md={6} className="mb-3">
                       <Form.Group controlId="contactName">
                         <Form.Label>Your Name</Form.Label>
                         <Form.Control
                           type="text"
+                          name="name"
                           placeholder="Enter your name"
+                          value={formData.name}
+                          onChange={handleInputChange}
                           required
                         />
                       </Form.Group>
@@ -150,7 +172,10 @@ const Contact = () => {
                         <Form.Label>Email Address</Form.Label>
                         <Form.Control
                           type="email"
+                          name="email"
                           placeholder="Enter your email"
+                          value={formData.email}
+                          onChange={handleInputChange}
                           required
                         />
                       </Form.Group>
@@ -162,14 +187,23 @@ const Contact = () => {
                         <Form.Label>Phone Number</Form.Label>
                         <Form.Control
                           type="tel"
+                          name="phone"
                           placeholder="Enter your phone number"
+                          value={formData.phone}
+                          onChange={handleInputChange}
                         />
                       </Form.Group>
                     </Col>
                     <Col md={6} className="mb-3">
                       <Form.Group controlId="contactSubject">
                         <Form.Label>Subject</Form.Label>
-                        <Form.Control type="text" placeholder="Enter subject" />
+                        <Form.Control
+                          type="text"
+                          name="subject"
+                          placeholder="Enter subject"
+                          value={formData.subject}
+                          onChange={handleInputChange}
+                        />
                       </Form.Group>
                     </Col>
                   </Row>
@@ -178,7 +212,10 @@ const Contact = () => {
                     <Form.Control
                       as="textarea"
                       rows={4}
+                      name="message"
                       placeholder="Your message"
+                      value={formData.message}
+                      onChange={handleInputChange}
                       required
                     />
                   </Form.Group>
