@@ -14,11 +14,11 @@ const Footer = () => {
               <i className="bi bi-geo-alt-fill me-2"></i> New York Metro Area
             </p>
             <p className="mb-1">
-              <i className="bi bi-telephone-fill me-2"></i> (555) 123-4567
+              <i className="bi bi-telephone-fill me-2"></i> (732) 900-6603
             </p>
             <p>
               <i className="bi bi-envelope-fill me-2"></i>{" "}
-              info@phantomhardwoodfloors.com
+              phantomhardwoodfloors@gmail.com
             </p>
           </Col>
 
