@@ -85,7 +85,7 @@ const Navbar = () => {
               Contact
             </Nav.Link>
           </Nav>
-          <Button variant="primary" className="ms-lg-3" href="#quote">
+          <Button variant="primary" className="ms-lg-3" href="#contact">
             Get a Quote
           </Button>
         </BootstrapNavbar.Collapse>

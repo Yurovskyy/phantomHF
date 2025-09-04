@@ -16,7 +16,7 @@ function App() {
         <Services />
         <About />
         <Gallery />
-        <QuoteForm />
+        {/* <QuoteForm /> */}
         <Contact />
       </main>
       <Footer />

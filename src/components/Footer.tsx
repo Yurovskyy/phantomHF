@@ -13,12 +13,22 @@ const Footer = () => {
             <p className="mb-1">
               <i className="bi bi-geo-alt-fill me-2"></i> New York Metro Area
             </p>
+            {/* NÚMERO DE TELEFONE E ÍCONE DE MENSAGEM ATUALIZADOS */}
             <p className="mb-1">
-              <i className="bi bi-telephone-fill me-2"></i> (732) 900-6603
+              <i className="bi bi-telephone-fill me-2"></i>
+              <a href="tel:7329006603" className="text-light text-decoration-none">
+                (732) 900-6603
+              </a>
+              <a href="sms:7329006603" className="text-light ms-2" aria-label="Send a Text Message">
+                <i className="bi bi-chat-dots-fill"></i>
+              </a>
             </p>
+            {/* E-MAIL AGORA CLICÁVEL */}
             <p>
-              <i className="bi bi-envelope-fill me-2"></i>{" "}
-              phantomhardwoodfloors@gmail.com
+              <i className="bi bi-envelope-fill me-2"></i>
+              <a href="mailto:phantomhardwoodfloors@gmail.com" className="text-light text-decoration-none">
+                phantomhardwoodfloors@gmail.com
+              </a>
             </p>
           </Col>
 
@@ -53,24 +63,7 @@ const Footer = () => {
             </ul>
           </Col>
 
-          {/* <Col lg={4} className="mb-4 mb-md-0">
-            <h5 className="text-accent mb-3">Newsletter</h5>
-            <p>
-              Subscribe to receive updates, access to exclusive deals, and more.
-            </p>
-            <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Control
-                  type="email"
-                  placeholder="Enter your email"
-                  className="bg-dark-light border-0 text-light"
-                />
-              </Form.Group>
-              <Button variant="primary" type="submit" className="w-100">
-                Subscribe
-              </Button>
-            </Form>
-          </Col> */}
+          {/* Coluna do Newsletter comentada */}
         </Row>
 
         <Row className="border-top border-secondary pt-4">

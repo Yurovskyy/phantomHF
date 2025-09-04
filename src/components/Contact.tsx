@@ -84,7 +84,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <h5 className="mb-1">Phone</h5>
-                    <p className="mb-0">(732)900-6603</p>
+                    <a href="tel:7329006603" className="text-body text-decoration-none">
+                      (732)900-6603
+                    </a>
                   </div>
                 </div>
 
@@ -118,7 +120,7 @@ const Contact = () => {
 
                 <h5 className="mb-3 mt-5">Connect With Us</h5>
                 <div className="d-flex">
-                  <a
+                  {/* <a
                     href="#"
                     className="me-3 social-icon"
                     aria-label="Facebook"
@@ -129,7 +131,7 @@ const Contact = () => {
                     >
                       <i className="bi bi-facebook text-light"></i>
                     </div>
-                  </a>
+                  </a> */}
                   <a
                     href="https://www.instagram.com/phantomhardwood/"
                     target="_blank"
@@ -141,6 +143,18 @@ const Contact = () => {
                       style={{ width: "40px", height: "40px" }}
                     >
                       <i className="bi bi-instagram text-light"></i>
+                    </div>
+                  </a>
+                  <a
+                    href="sms:7329006603"
+                    className="me-3 social-icon"
+                    aria-label="Send a Text Message"
+                  >
+                    <div
+                      className="rounded-circle bg-primary d-flex align-items-center justify-content-center"
+                      style={{ width: "40px", height: "40px" }}
+                    >
+                      <i className="bi bi-chat-dots-fill text-light"></i>
                     </div>
                   </a>
                 </div>

@@ -48,12 +48,21 @@ const Hero = () => {
               services with our unique blend of traditional craftsmanship and
               modern technology.
             </p>
-            <div className="d-flex justify-content-center gap-3 fade-in">
-              <Button variant="primary" size="lg" href="#quote">
+            <div className="d-flex flex-wrap justify-content-center gap-3 fade-in">
+              <Button variant="primary" size="lg" href="#contact">
                 Free Estimate
               </Button>
               <Button variant="outline-light" size="lg" href="#services">
                 Explore Our Services
+              </Button>
+              <Button variant="outline-light" size="lg"
+                target="_blank"
+                href="https://www.instagram.com/phantomhardwood/">
+                Our Instagram
+              </Button>
+              {/* Botão de SMS adicionado */}
+              <Button variant="outline-light" size="lg" href="sms:7329006603">
+                Send SMS
               </Button>
             </div>
             <div className="mt-5 pt-4 fade-in">
